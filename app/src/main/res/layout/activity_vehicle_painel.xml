@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.bachi.android.fuelconsumption.Vehicle_painel"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/tv_vehicle_name"
+        android:layout_width="230dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/xcolorIcons"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/list_fillup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/btn_new_fillup"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="New FillUp"
+        android:textColor="@color/xcolorIcons"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <ListView
+        android:id="@+id/list_fillup"
+        android:layout_width="match_parent"
+
+        android:layout_height="330dp"
+        android:background="@color/colorPrimaryDark"
+        android:clickable="false"
+        android:elevation="0dp"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="false"
+        android:isScrollContainer="false"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollingCache="false"
+        android:smoothScrollbar="false"
+        app:layout_constraintBottom_toTopOf="@+id/btn_new_fillup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:listfooter="@android:drawable/alert_dark_frame" />
+
+</android.support.constraint.ConstraintLayout>
