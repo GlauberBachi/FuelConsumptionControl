@@ -1,11 +1,9 @@
 package com.bachi.android.fuelconsumption;
 
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v4.app.DialogFragment;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,21 +11,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Fillup_edit extends AppCompatActivity {
+    Button  btn_delete;
+    EditText et_date, et_odometer, et_liters, et_kmDriven, et_consumption, et_fillupID;
+    int vehicleID;
+    DatabaseHelper db;
     private TextView tv_vehicle_name;
-
     private int selectedFillupID;
     private String selectedName, fillupDate; //, receivedDescription;
     private long receivedOdometer, receivedLiters, receivedKmDriven, receivedConsumption;
-
-    Button  btn_delete;
-    EditText et_date, et_odometer, et_liters, et_kmDriven, et_consumption, et_fillupID;
-
-    int vehicleID;
-
-    DatabaseHelper db;
     //Vehicle_painel vp;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +71,16 @@ public class Fillup_edit extends AppCompatActivity {
 
 
         //showMessage("Remeber", "For the sequence number 1, the fields 'kms driven' and 'km/Liter' will be always blank");
+
+        tv_vehicle_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent screenVehicle = new Intent(Fillup_edit.this, Vehicle_edit.class);
+                screenVehicle.putExtra("ID", vehicleID);
+                screenVehicle.putExtra("name", selectedName);
+                startActivity(screenVehicle);
+            }
+        });
 
 
         btn_delete.setOnClickListener(new View.OnClickListener() {

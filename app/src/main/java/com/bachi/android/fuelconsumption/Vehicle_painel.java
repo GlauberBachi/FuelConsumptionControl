@@ -2,8 +2,8 @@ package com.bachi.android.fuelconsumption;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,23 +16,18 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import static android.R.attr.id;
-import static android.R.attr.label;
-import static com.bachi.android.fuelconsumption.DatabaseHelper.FILLUP_DATE;
-
 public class Vehicle_painel extends AppCompatActivity {
+    private static final String TAG = "Vehicle_painel";
+    int vehicleID;
+    String label, description;
+    int sequence;
+    DatabaseHelper db;
     private TextView tv_vehicle_name;
     private Button btn_new_fillup;
     private ListView list_fillup;
     private int selectedID;
     private long odometer, liters, kmDriven, consumption;
     private String selectedName, fillupDate;
-    int vehicleID;
-    String label, description;
-    int sequence;
-
-    DatabaseHelper db;
-    private static final String TAG = "Vehicle_painel";
 
 
 
@@ -125,6 +120,7 @@ public class Vehicle_painel extends AppCompatActivity {
 
         while (cursor.moveToNext()) {
             arrayList.add(cursor.getString(0) + "          Fillup " + cursor.getString(8) + " " + cursor.getString(7));
+
         }
 
 

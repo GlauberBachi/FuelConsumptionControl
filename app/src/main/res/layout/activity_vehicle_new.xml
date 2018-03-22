@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bachi.android.fuelconsumption.Vehicle_new"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    tools:context="com.bachi.android.fuelconsumption.Vehicle_new">
 
     <EditText
         android:id="@+id/et_name"
-        android:labelFor="@id/et_name"
-        android:layout_width="230dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -18,6 +17,7 @@
         android:layout_marginTop="8dp"
         android:ems="4"
         android:inputType="textPersonName"
+        android:labelFor="@id/et_name"
         android:maxLength="14"
         android:textAlignment="center"
         android:textColor="@color/xcolorIcons"
@@ -51,7 +51,11 @@
         android:layout_height="70dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorAccent"
         android:text="SAVE"
+        android:textColor="@color/xcolorIcons"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
